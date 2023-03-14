@@ -21,4 +21,11 @@ class BookController extends Controller
             'book' => Book::findOrFail($id)
         ]);
     }
+
+    public function others(): View
+    {
+        return view('others', [
+            'sharedVar' => 'This one is inherited'
+        ]);
+    }
 }
