@@ -25,5 +25,5 @@
 
     @include('shared.footer', ['passedVar' => 'this var is passed down'])
 
-    <x-alert/>
+    <x-alert type="orange" :message="$message"/>
 @endsection

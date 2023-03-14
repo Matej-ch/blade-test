@@ -11,9 +11,12 @@ class Alert extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $type,
+        public string $message,
+    )
     {
-        //
+        //public string $alertType in constructor VS alert-type as attribute on blade component
     }
 
     /**
