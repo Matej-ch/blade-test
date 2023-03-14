@@ -21,7 +21,8 @@ class BookFactory extends Factory
     {
         return [
             'name' => fake()->realText(25),
-            'isbn' => fake()->isbn13()
+            'isbn' => fake()->isbn13(),
+            'cover' => '<img src="/path/to/image" alt="test image" />'
         ];
     }
 }
