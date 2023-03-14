@@ -14,7 +14,15 @@
                 {{ $book->name }}
                 {{ $book->cover }}
                 {!! $book->cover !!}
+
             </div>   {{-- echo (e) htmlspecialchars --}}
+            <div class="pb-8">
+                Custom blade echo directive of an object
+                <pre class="inline">Book</pre>
+                defined in
+                <pre class="inline">AppServiceProvider</pre>
+                : {{$book}}
+            </div>
         @endforeach
     </div>
 

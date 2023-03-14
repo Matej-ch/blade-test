@@ -1,6 +1,7 @@
 @extends('components.layout')
 
 @section('content')
+    {{-- template inheritance, used more before components came along --}}
     <div class="pb-2">
         The current date is {{ date('d.m.Y') }}.
     </div>
