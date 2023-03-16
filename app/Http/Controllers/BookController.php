@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class BookController extends Controller
@@ -32,7 +31,7 @@ class BookController extends Controller
 
     public function indexNew(): View
     {
-        return view('books.index', [
+        return view('books.index-new', [
             'books' => Book::all()
         ]);
     }

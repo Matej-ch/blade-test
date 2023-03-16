@@ -16,7 +16,6 @@
 
 <body>
 
-
 <header>
     @yield('banner')
 </header>

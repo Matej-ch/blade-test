@@ -8,22 +8,10 @@
 
 <x-layout-new {{-- content="Content for layout "--}}>
     <x-slot name="content">
-        
+
         <div class="pb-8">
             @foreach($books as $book)
-                <div class="{{$loop->first ? 'bg-red-200' : 'bg-green-200' }}">
-                    {{ $book->name }}
-                    {{ $book->cover }}
-                    {!! $book->cover !!}
-
-                </div>   {{-- echo (e) htmlspecialchars --}}
-                <div class="pb-8">
-                    Custom blade echo directive of an object
-                    <pre class="inline">Book</pre>
-                    defined in
-                    <pre class="inline">AppServiceProvider</pre>
-                    : {{$book}}
-                </div>
+                <x-book-card :book="$book" :loop="$loop"></x-book-card>
             @endforeach
         </div>
 
