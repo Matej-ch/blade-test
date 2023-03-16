@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/books', [BookController::class, 'index']);
 
+Route::get('/books-new', [BookController::class, 'indexNew']);
+
 Route::get('/books/{id}', [BookController::class, 'view']);
 
 Route::get('/others', [BookController::class, 'others']);

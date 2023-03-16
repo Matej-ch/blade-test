@@ -29,4 +29,11 @@ class BookController extends Controller
             'message' => 'This is an alert message'
         ]);
     }
+
+    public function indexNew(): View
+    {
+        return view('books.index', [
+            'books' => Book::all()
+        ]);
+    }
 }

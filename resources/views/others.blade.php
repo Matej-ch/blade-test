@@ -22,8 +22,6 @@
         You are not signed in.
     @endunless
 
-    {{-- Blade Directives @ --}}
-
     @include('shared.footer', ['passedVar' => 'this var is passed down'])
 
     <x-alert type="orange" :message="$message"/>
