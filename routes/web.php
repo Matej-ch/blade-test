@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/books', [BookController::class, 'index']);
+Route::get('/books', [BookController::class, 'index'])->name('books');
 
-Route::get('/books-new', [BookController::class, 'indexNew']);
+Route::get('/books-new', [BookController::class, 'indexNew'])->name('books-new');
 
-Route::get('/books/{id}', [BookController::class, 'view']);
+Route::get('/books/{id}', [BookController::class, 'view'])->name('book');
 
-Route::get('/others', [BookController::class, 'others']);
+Route::get('/others', [BookController::class, 'others'])->name('others');
