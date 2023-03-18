@@ -8,6 +8,11 @@
 
     <div class="pb-8">
         <?php $__currentLoopData = $books; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $book): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+            <?php if($loop->first): ?>
+                <div class="bg-orange-500 font-bold text-center">First book</div>
+            <?php endif; ?>
+
             <div class="<?php echo e($__bladeCompiler->applyEchoHandler($loop->first ? 'bg-red-200' : 'bg-green-200')); ?>">
                 <?php echo e($__bladeCompiler->applyEchoHandler($book->name)); ?>
 
@@ -25,6 +30,10 @@
                 : <?php echo e($__bladeCompiler->applyEchoHandler($book)); ?>
 
             </div>
+
+            <?php if($loop->last): ?>
+                <div class="bg-orange-500 font-bold text-center"> Last book</div>
+            <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 

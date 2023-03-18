@@ -10,6 +10,11 @@
 
     <div class="pb-8">
         @foreach($books as $book)
+
+            @if ($loop->first)
+                <div class="bg-orange-500 font-bold text-center">First book</div>
+            @endif
+
             <div class="{{$loop->first ? 'bg-red-200' : 'bg-green-200' }}">
                 {{ $book->name }}
                 {{ $book->cover }}
@@ -23,6 +28,10 @@
                 <pre class="inline">AppServiceProvider</pre>
                 : {{$book}}
             </div>
+
+            @if ($loop->last)
+                <div class="bg-orange-500 font-bold text-center"> Last book</div>
+            @endif
         @endforeach
     </div>
 

@@ -28,7 +28,9 @@
                             'components'=>'Components',
                             'livewire'=>'Livewire',
                             'others'=>'Others'] as $pathName => $label)
-                    <x-button :routeName="$pathName" :label="$label"></x-button>
+                    <x-button :routeName="$pathName">
+                        {{$label}}
+                    </x-button>
                 @endforeach
 
             </div>
@@ -193,3 +195,7 @@
         </div>
     </div>
 @endsection
+
+<script>
+    console.log('hello');
+</script>

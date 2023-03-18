@@ -9,6 +9,8 @@ use Illuminate\View\Component;
 class Alert extends Component
 {
     /**
+     * All of the attributes that are not part of the component's constructor will automatically be added to the component's "attribute bag"
+     * e.g. class on component, is accessed as $attributes
      * Create a new component instance.
      */
     public function __construct(
@@ -25,5 +27,10 @@ class Alert extends Component
     public function render(): View|Closure|string
     {
         return view('components.alert');
+    }
+
+    public function shouldRender(): bool
+    {
+        return $this->type !== 'none';
     }
 }
