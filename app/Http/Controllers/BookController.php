@@ -21,14 +21,6 @@ class BookController extends Controller
         ]);
     }
 
-    public function others(): View
-    {
-        return view('others', [
-            'sharedVar' => 'This one is inherited',
-            'message' => 'This is an alert message'
-        ]);
-    }
-
     public function indexNew(): View
     {
         return view('books.index-new', [

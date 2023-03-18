@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', static function () {
     return view('welcome');
 });
 
@@ -24,4 +25,8 @@ Route::get('/books-new', [BookController::class, 'indexNew'])->name('books-new')
 
 Route::get('/books/{id}', [BookController::class, 'view'])->name('book');
 
-Route::get('/others', [BookController::class, 'others'])->name('others');
+Route::get('/others', [HomeController::class, 'others'])->name('others');
+
+Route::get('/livewire', [HomeController::class, 'livewire'])->name('livewire');
+
+Route::get('/components', [HomeController::class, 'components'])->name('components');

@@ -11,7 +11,7 @@
 
         <div class="pb-8">
             @foreach($books as $book)
-                <x-book-card :book="$book" :loop="$loop"></x-book-card>
+                <x-book-card :book="$book" :loop="$loop"></x-book-card> <!-- Anonymous components -->
             @endforeach
         </div>
 
