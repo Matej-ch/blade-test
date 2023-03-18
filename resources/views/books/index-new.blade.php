@@ -1,4 +1,4 @@
-@extends('components.layout')
+@extends('layouts.base')
 
 @section('banner')
     <nav class="p-8 flex justify-center font-bold">

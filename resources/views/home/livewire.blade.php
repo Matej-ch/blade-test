@@ -1,4 +1,4 @@
-@extends('components.layout')
+@extends('layouts.base')
 
 <x-layout-new {{-- content="Content for layout "--}}>
 
