@@ -15,6 +15,10 @@
                 <div class="bg-orange-500 font-bold text-center">First book</div>
             @endif
 
+            @if ($loop->last)
+                <div class="bg-emerald-500 font-bold text-center"> Last book</div>
+            @endif
+
             <div class="{{$loop->first ? 'bg-red-200' : 'bg-green-200' }}">
                 {{ $book->name }}
                 {{ $book->cover }}
@@ -29,9 +33,6 @@
                 : {{$book}}
             </div>
 
-            @if ($loop->last)
-                <div class="bg-orange-500 font-bold text-center"> Last book</div>
-            @endif
         @endforeach
     </div>
 

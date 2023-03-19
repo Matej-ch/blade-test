@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -21,7 +23,8 @@ class HomeController extends Controller
     public function components(): View
     {
         return view('home.components', [
-            'message' => 'This is an alert message'
+            'message' => 'This is an alert message',
+            'books' => DB::table('books')->limit(5)->get(),
         ]);
     }
 }

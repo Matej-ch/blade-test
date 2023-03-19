@@ -23,7 +23,7 @@ Route::get('/books', [BookController::class, 'index'])->name('books');
 
 Route::get('/books-new', [BookController::class, 'indexNew'])->name('books-new');
 
-Route::get('/books/{id}', [BookController::class, 'view'])->name('book');
+Route::get('/books/{id}', [BookController::class, 'show'])->name('book');
 
 Route::get('/others', [HomeController::class, 'others'])->name('others');
 

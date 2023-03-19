@@ -13,6 +13,10 @@
                 <div class="bg-orange-500 font-bold text-center">First book</div>
             <?php endif; ?>
 
+            <?php if($loop->last): ?>
+                <div class="bg-emerald-500 font-bold text-center"> Last book</div>
+            <?php endif; ?>
+
             <div class="<?php echo e($__bladeCompiler->applyEchoHandler($loop->first ? 'bg-red-200' : 'bg-green-200')); ?>">
                 <?php echo e($__bladeCompiler->applyEchoHandler($book->name)); ?>
 
@@ -31,12 +35,13 @@
 
             </div>
 
-            <?php if($loop->last): ?>
-                <div class="bg-orange-500 font-bold text-center"> Last book</div>
-            <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
+    <?php
+        $testVar = 1;
+    ?>
+
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('components.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH S:\PHPStorm\blade-example\resources\views/books/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH S:\PHPStorm\blade-example\resources\views/books/index.blade.php ENDPATH**/ ?>
