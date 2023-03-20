@@ -25,6 +25,9 @@
 
         <x-alert type="orange" :message="$message"/> {{-- Class based components --}}
 
+
+        <livewire:counter/>
+
     </x-slot>
 </x-layout-new>
 

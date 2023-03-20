@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
+    @livewireStyles
 </head>
 
 <body>
@@ -21,4 +22,6 @@
 </header>
 
 {{$content}}
+
+@livewireScripts
 </body>
