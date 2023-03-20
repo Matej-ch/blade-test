@@ -1,10 +1,6 @@
-@extends('layouts.base')
-
-@section('banner')
-    <nav class="p-8 flex justify-center font-bold">
-        Hello this is banner section
-    </nav>
-@endsection
+<x-banner>
+    Hello this is banner section
+</x-banner>
 
 <x-layout-new {{-- content="Content for layout "--}}>
     <x-slot name="content">
