@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', static function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/books', [BookController::class, 'index'])->name('books');
 

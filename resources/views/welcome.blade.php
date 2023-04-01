@@ -14,7 +14,6 @@
                         {{$label}}
                     </x-button>
                 @endforeach
-
             </div>
 
             <div class="mt-8">
