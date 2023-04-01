@@ -17,10 +17,6 @@
 
 <body>
 
-<header>
-    @yield('banner')
-</header>
-
 {{$content}}
 
 @livewireScripts

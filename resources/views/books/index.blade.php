@@ -2,7 +2,7 @@
 
 @section('banner')
     <nav class="p-8 flex justify-center font-bold">
-        Hello this is banner section
+        Hello, this is banner section
     </nav>
 @endsection
 
@@ -24,7 +24,7 @@
                 {{ $book->cover }}
                 {!! $book->cover !!}
 
-            </div>   {{-- echo (e) htmlspecialchars --}}
+            </div>
             <div class="pb-8">
                 Custom blade echo directive of an object
                 <pre class="inline">Book</pre>

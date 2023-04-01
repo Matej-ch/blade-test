@@ -1,6 +1,6 @@
 <?php $__bladeCompiler = app('blade.compiler'); ?><?php $__env->startSection('banner'); ?>
     <nav class="p-8 flex justify-center font-bold">
-        Hello this is banner section
+        Hello, this is banner section
     </nav>
 <?php $__env->stopSection(); ?>
 
@@ -25,7 +25,7 @@
                 <?php echo $__bladeCompiler->applyEchoHandler($book->cover); ?>
 
 
-            </div>   
+            </div>
             <div class="pb-8">
                 Custom blade echo directive of an object
                 <pre class="inline">Book</pre>
@@ -37,10 +37,6 @@
 
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
-
-    <?php
-        $testVar = 1;
-    ?>
 
 <?php $__env->stopSection(); ?>
 
