@@ -30,3 +30,5 @@ Route::get('/others', [HomeController::class, 'others'])->name('others');
 Route::get('/livewire', [HomeController::class, 'livewire'])->name('livewire');
 
 Route::get('/components', [HomeController::class, 'components'])->name('components');
+
+Route::get('/counter', [HomeController::class, 'counter'])->name('counter');

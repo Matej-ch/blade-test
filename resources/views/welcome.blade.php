@@ -7,6 +7,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-4">
                 @foreach(['books'=>'Books (foreach ex.)',
                             'books-new'=>'Books (component layout ex.)',
+                            'counter' => 'Counter components',
                             'components'=>'Components',
                             'livewire'=>'Livewire',
                             'others'=>'Others'] as $routeName => $label)

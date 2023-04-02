@@ -1,4 +1,4 @@
-<x-layout-new {{-- content="Content for layout "--}}>
+<x-layout-new>
     <x-slot name="content">
 
         <main class="p-8">
@@ -32,10 +32,7 @@
 
             <x-alert type="orange" :message="$message"/> {{-- Class based components --}}
 
-
-            <livewire:counter/>
         </main>
-
 
     </x-slot>
 </x-layout-new>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -26,5 +25,10 @@ class HomeController extends Controller
             'message' => 'This is an alert message',
             'books' => DB::table('books')->limit(5)->get(),
         ]);
+    }
+
+    public function counter(): View
+    {
+        return view('home.counter');
     }
 }
