@@ -9,7 +9,9 @@
 
             <div class="text-center">
                 <h2 class="font-bold">Counter blade component with js</h2>
+                <x-counter-js :count="12"></x-counter-js>
             </div>
+
             <div class="text-center">
                 <h2 class="font-bold">Counter livewire component</h2>
                 <livewire:counter/>
