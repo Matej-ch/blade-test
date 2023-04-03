@@ -18,6 +18,8 @@ php artisan tinker
 
 `php artisan make:component Alert` make blade component
 
+`php artisan make:livewire Alert` make livewire component
+
 `php artisan list` show available commands
 
 free laravel series https://laracasts.com/series/laravel-8-from-scratch

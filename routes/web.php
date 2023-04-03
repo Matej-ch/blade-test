@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
+use App\Http\Livewire\ShowBooks;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ Route::get('/', static function () {
 Route::get('/books', [BookController::class, 'index'])->name('books');
 
 Route::get('/books-new', [BookController::class, 'indexNew'])->name('books-new');
+
+Route::get('/books-lw', ShowBooks::class)->name('books-lw');
 
 Route::get('/books/{id}', [BookController::class, 'show'])->name('book');
 
