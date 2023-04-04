@@ -33,4 +33,28 @@ class BookController extends Controller
             'books' => Book::all()
         ]);
     }
+
+    public function create()
+    {
+        return view('books.create',[]);
+    }
+
+    public function edit(Book $book)
+    {
+        return view('books.edit',[
+            'book' => $book
+        ]);
+    }
+
+    public function store()
+    {
+        $attributes = request()->validate([
+            'name' => 'required',
+            'isbn' => 'required'
+        ]);
+
+        Book::create($attributes);
+
+        return redirect('books-new');
+    }
 }

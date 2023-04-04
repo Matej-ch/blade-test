@@ -2,7 +2,7 @@
     <x-slot name="content">
 
         <x-banner>
-            Hello this is banner component
+            <x-button routeName="books-create" class="bg-green-200 max-w-2xl">Add book</x-button>
         </x-banner>
 
         <div class="pb-8">

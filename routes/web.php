@@ -27,6 +27,8 @@ Route::get('/books-new', [BookController::class, 'indexNew'])->name('books-new')
 
 Route::get('/books-lw', ShowBooks::class)->name('books-lw');
 Route::get('/book-lw/{book}', ShowBook::class)->name('book-lw');
+Route::get('/books/create',[BookController::class,'create'])->name('books-create');
+Route::post('/books',[BookController::class,'store'])->name('books-store');
 
 Route::get('/books/{id}', [BookController::class, 'show'])->name('book');
 
@@ -39,3 +41,4 @@ Route::get('/livewire', [HomeController::class, 'livewire'])->name('livewire');
 Route::get('/components', [HomeController::class, 'components'])->name('components');
 
 Route::get('/counter', [HomeController::class, 'counter'])->name('counter');
+
