@@ -9,12 +9,14 @@
         {!! $book->cover !!}
 
     </div>
-    <div class="pb-8">
+    <div class="pb-4">
         Custom blade echo directive of an object
         <pre class="inline">Book</pre>
         defined in
         <pre class="inline">AppServiceProvider</pre>
         : {{$book}}
     </div>
+
+    {{$slot}}
 </article>
 
