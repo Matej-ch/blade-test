@@ -16,7 +16,19 @@
                     <div class="bg-emerald-500 font-bold text-center"> Last book</div>
                 @endif
 
-                <x-book-card :book="$book" :loop="$loop"></x-book-card> <!-- Anonymous components -->
+                <x-book-card :book="$book" :loop="$loop">
+                    <div class="flex gap-1 mb-4">
+                        <x-button routeName="book" params="{{$book->id}}" class="bg-blue-400 hover:bg-blue-600">Detail</x-button>
+                        <x-button class="bg-green-400 hover:bg-green-600">Edit</x-button>
+                        <form action="{{route('book-delete',[$book])}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <x-button class="bg-red-400 hover:bg-red-600">Delete</x-button>
+                        </form>
+
+                    </div>
+
+                </x-book-card> <!-- Anonymous components -->
             @endforeach
         </div>
 

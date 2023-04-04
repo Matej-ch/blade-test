@@ -30,6 +30,8 @@ Route::get('/book-lw/{book}', ShowBook::class)->name('book-lw');
 
 Route::get('/books/{id}', [BookController::class, 'show'])->name('book');
 
+Route::delete('/books/{book}',[BookController::class,'destroy'])->name('book-delete');
+
 Route::get('/others', [HomeController::class, 'others'])->name('others');
 
 Route::get('/livewire', [HomeController::class, 'livewire'])->name('livewire');
