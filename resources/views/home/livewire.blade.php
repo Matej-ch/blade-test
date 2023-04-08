@@ -2,6 +2,8 @@
 
 <x-layout-new {{-- content="Content for layout "--}}>
 
-    <x-slot name="content"></x-slot>
+    <x-slot name="content">
+        <livewire:book-autocomplete></livewire:book-autocomplete>
+    </x-slot>
 
 </x-layout-new>
